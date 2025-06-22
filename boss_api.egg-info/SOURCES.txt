@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+boss_api.egg-info/PKG-INFO
+boss_api.egg-info/SOURCES.txt
+boss_api.egg-info/dependency_links.txt
+boss_api.egg-info/requires.txt
+boss_api.egg-info/top_level.txt
