@@ -1,8 +1,3 @@
-Here's a clean, **attractive-looking `README.md`** for your **Boss Backend API** project. It includes badges, improved formatting, proper sectioning, and modern aesthetics using Markdown features like admonitions and anchors.
-
----
-
-```md
 # 🚀 Boss Backend API
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -140,8 +135,3 @@ Licensed under the [MIT License](LICENSE).
 ---
 
 _Developed with ❤️ by the **Boss Net** team._
-```
-
----
-
-Let me know if you want a version with emojis removed, or extra sections like **Contributing**, **Architecture**, or **API Docs**.
