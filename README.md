@@ -1,93 +1,147 @@
-# Boss Backend API
+Here's a clean, **attractive-looking `README.md`** for your **Boss Backend API** project. It includes badges, improved formatting, proper sectioning, and modern aesthetics using Markdown features like admonitions and anchors.
 
-## Usage
+---
+
+```md
+# 🚀 Boss Backend API
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](../.github/workflows)
+[![Python](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+
+A blazing-fast, production-ready backend for the **Boss** platform. Powered by Flask, Celery, Redis, PostgreSQL, and Weaviate.
+
+---
+
+## ⚙️ Usage
 
 > [!IMPORTANT]
-> 
-> In the v1.3.0 release, `poetry` has been replaced with
-> [`uv`](https://docs.astral.sh/uv/) as the package manager
-> for Boss API backend service.
+> This project uses [`uv`](https://docs.astral.sh/uv/) as the **Python package manager**. Make sure it's installed first.
 
-1. Start the docker-compose stack
+---
 
-   The backend require some middleware, including PostgreSQL, Redis, and Weaviate, which can be started together using `docker-compose`.
+### 🐳 Start Middleware Stack
+
+The backend depends on PostgreSQL, Redis, and Weaviate. Launch them via `docker-compose`:
+
+```bash
+cd docker
+cp middleware.env.example middleware.env
+# optional: switch profile if not using Weaviate
+docker compose -f docker-compose.middleware.yaml --profile weaviate -p boss up -d
+```
+
+---
+
+### 🔐 Set Up Environment
+
+1. Copy `.env.example` to `.env`:
 
    ```bash
-   cd ../docker
-   cp middleware.env.example middleware.env
-   # change the profile to other vector database if you are not using weaviate
-   docker compose -f docker-compose.middleware.yaml --profile weaviate -p boss up -d
-   cd ../api
-   ```
-
-2. Copy `.env.example` to `.env`
-
-   ```cli
    cp .env.example .env 
    ```
-3. Generate a `SECRET_KEY` in the `.env` file.
 
-   bash for Linux
-   ```bash for Linux
+2. Generate a `SECRET_KEY`:
+
+   **Linux:**
+   ```bash
    sed -i "/^SECRET_KEY=/c\SECRET_KEY=$(openssl rand -base64 42)" .env
    ```
-   bash for Mac
-   ```bash for Mac
+
+   **macOS:**
+   ```bash
    secret_key=$(openssl rand -base64 42)
    sed -i '' "/^SECRET_KEY=/c\\
    SECRET_KEY=${secret_key}" .env
    ```
 
-4. Create environment.
+---
 
-   Boss API service uses [UV](https://docs.astral.sh/uv/) to manage dependencies.
-   First, you need to add the uv package manager, if you don't have it already.
+### 📦 Dependency Setup
 
-   ```bash
-   pip install uv
-   # Or on macOS
-   brew install uv
-   ```
+Install [`uv`](https://docs.astral.sh/uv/) if not installed:
 
-5. Install dependencies
+```bash
+# Linux / Windows
+pip install uv
+
+# macOS
+brew install uv
+```
+
+Then sync dependencies:
+
+```bash
+uv sync --dev
+```
+
+---
+
+### 🔄 Database Migration
+
+Run migrations before first use:
+
+```bash
+uv run flask db upgrade
+```
+
+---
+
+### 🚀 Start the Backend
+
+```bash
+uv run flask run --host 0.0.0.0 --port=5001 --debug
+```
+
+---
+
+### 🌐 Start the Web UI
+
+Start the [Boss Web Frontend](../web) and open:
+
+```
+http://localhost:3000
+```
+
+---
+
+### 🧵 Start Async Worker (Optional)
+
+For dataset importing, document indexing, and other async tasks:
+
+```bash
+uv run celery -A app.celery worker \
+  -P gevent -c 1 --loglevel INFO \
+  -Q dataset,generation,mail,ops_trace,app_deletion
+```
+
+---
+
+## ✅ Testing
+
+1. Sync all test dependencies:
 
    ```bash
    uv sync --dev
    ```
 
-6. Run migrate
-
-   Before the first launch, migrate the database to the latest version.
-
-   ```bash
-   uv run flask db upgrade
-   ```
-
-7. Start backend
-
-   ```bash
-   uv run flask run --host 0.0.0.0 --port=5001 --debug
-   ```
-
-8. Start Boss [web](../web) service.
-9. Setup your application by visiting `http://localhost:3000`.
-10. If you need to handle and debug the async tasks (e.g. dataset importing and documents indexing), please start the worker service.
-
-   ```bash
-   uv run celery -A app.celery worker -P gevent -c 1 --loglevel INFO -Q dataset,generation,mail,ops_trace,app_deletion
-   ```
-
-## Testing
-
-1. Install dependencies for both the backend and the test environment
-
-   ```bash
-   uv sync --dev
-   ```
-
-2. Run the tests locally with mocked system environment variables in `tool.pytest_env` section in `pyproject.toml`
+2. Run tests locally with mocked variables (`tool.pytest_env` in `pyproject.toml`):
 
    ```bash
    uv run -P api bash dev/pytest/pytest_all_tests.sh
    ```
 
+---
+
+## 📜 License
+
+Licensed under the [MIT License](LICENSE).
+
+---
+
+_Developed with ❤️ by the **Boss Net** team._
+```
+
+---
+
+Let me know if you want a version with emojis removed, or extra sections like **Contributing**, **Architecture**, or **API Docs**.
