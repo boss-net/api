@@ -47,7 +47,7 @@ dependencies = [
     "opentelemetry-exporter-otlp-proto-http==1.27.0",
     "opentelemetry-instrumentation==0.48b0",
     "opentelemetry-instrumentation-celery==0.48b0",
-    "opentelemetry-instrumentation-flask==0.48b0",
+    "opentelemetry-instrumentation-flask==0.55b1",
     "opentelemetry-instrumentation-sqlalchemy==0.48b0",
     "opentelemetry-propagator-b3==1.27.0",
     # opentelemetry-proto1.28.0 depends on protobuf (>=5.0,<6.0),
