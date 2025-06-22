@@ -1,0 +1,114 @@
+FAIL	github.com/boss-net/api/boss-plugin/cmd/commandline [setup failed]
+FAIL	github.com/boss-net/api/boss-plugin/cmd/commandline/plugin [setup failed]
+FAIL	github.com/boss-net/api/boss-plugin/cmd/commandline/signature [setup failed]
+FAIL	github.com/boss-net/api/boss-plugin/integration [setup failed]
+FAIL	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager [setup failed]
+FAIL	github.com/boss-net/api/boss-plugin/pkg/plugin_packager [setup failed]
+FAIL	github.com/boss-net/api/boss-plugin/cmd/codegen [build failed]
+?   	github.com/boss-net/api/boss-plugin/cmd/commandline/bundle	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/cmd/commandline/run [build failed]
+?   	github.com/boss-net/api/boss-plugin/cmd/license/generate	[no test files]
+?   	github.com/boss-net/api/boss-plugin/cmd/license/sign	[no test files]
+?   	github.com/boss-net/api/boss-plugin/cmd/license/verify	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/cmd/server [build failed]
+?   	github.com/boss-net/api/boss-plugin/cmd/tests	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/internal/cluster [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/core/boss_invocation	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/core/boss_invocation/real	0.014s
+?   	github.com/boss-net/api/boss-plugin/internal/core/boss_invocation/tester	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/boss_invocation	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/internal/core/boss_invocation/real [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/core/boss_invocation/tester	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/license/private_key	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/license/public_key	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/core/persistence	0.027s
+FAIL	github.com/boss-net/api/boss-plugin/internal/core/plugin_daemon [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_daemon/access_types	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/core/plugin_daemon/backwards_invocation	0.011s
+FAIL	github.com/boss-net/api/boss-plugin/internal/core/plugin_daemon/backwards_invocation/transaction [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_daemon/generic_invoke	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/basic_runtime	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/debugging_runtime	0.024s
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/lifecycle	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/local_runtime	0.010s
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/media_transport	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/plugin_errors	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/serverless_connector	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/serverless_runtime	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/serverless_runtime/dockerfile	0.010s
+FAIL	github.com/boss-net/api/boss-plugin/internal/core/plugin_manager/test_utils [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/core/session_manager	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/db	0.012s
+?   	github.com/boss-net/api/boss-plugin/internal/db/mysql	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/db/pg	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/manifest	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/internal/server [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/server/constants	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/internal/server/controllers [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/server/controllers/config	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/server/controllers/definitions	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/server/controllers/generator	[no test files]
+FAIL	github.com/boss-net/api/boss-plugin/internal/service [build failed]
+?   	github.com/boss-net/api/boss-plugin/internal/service/install_service	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/types/app	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/types/exception	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/types/models	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/types/models/curd	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/cache	0.016s
+?   	github.com/boss-net/api/boss-plugin/internal/utils/cache/helper	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/debugging	0.007s
+?   	github.com/boss-net/api/boss-plugin/internal/utils/encryption	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/utils/http_requests	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/json_schema	0.007s
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/lock	0.003s
+?   	github.com/boss-net/api/boss-plugin/internal/utils/log	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/mapping	0.003s
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/network	0.005s
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/parser	0.006s
+?   	github.com/boss-net/api/boss-plugin/internal/utils/routine	[no test files]
+goos: linux
+goarch: amd64
+pkg: github.com/boss-net/api/boss-plugin/internal/utils/stream
+cpu: AMD EPYC 7763 64-Core Processor                
+BenchmarkStream-2   	726212067	        42.71 ns/op	      15 B/op	       0 allocs/op
+PASS
+ok  	github.com/boss-net/api/boss-plugin/internal/utils/stream	36.061s
+?   	github.com/boss-net/api/boss-plugin/internal/utils/strings	[no test files]
+?   	github.com/boss-net/api/boss-plugin/internal/utils/tmpfile	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/bundle_packager	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/entities	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/agent_entities	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/pkg/entities/bundle_entities	0.006s
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/constants	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/endpoint_entities	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/manifest_entities	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/pkg/entities/model_entities	0.006s
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/oauth_entities	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/pkg/entities/plugin_entities	0.006s
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/requests	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/entities/tool_entities	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/plugin_packager/consts	[no test files]
+PASS
+ok  	github.com/boss-net/api/boss-plugin/pkg/plugin_packager/decoder	0.007s
+?   	github.com/boss-net/api/boss-plugin/pkg/plugin_packager/packager	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/plugin_packager/signer	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/plugin_packager/signer/withkey	[no test files]
+?   	github.com/boss-net/api/boss-plugin/pkg/validators	[no test files]
+FAIL
