@@ -3,7 +3,6 @@ module github.com/boss-net/api/boss-plugin
 go 1.23.3
 
 require (
-	github.com/boss-net/api/cloud v0.0.0-00010101000000-000000000000
 	github.com/charmbracelet/bubbles v0.19.0
 	github.com/charmbracelet/bubbletea v1.1.0
 	github.com/fxamacker/cbor/v2 v2.7.0
@@ -58,6 +57,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/sts v1.33.19 // indirect
 	github.com/aws/smithy-go v1.22.2 // indirect
 	github.com/aymanbagabas/go-osc52/v2 v2.0.1 // indirect
+	github.com/boss-net/api/cloud v0.0.0-20250622013723-1d41caa159a8 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/charmbracelet/lipgloss v0.13.0 // indirect
 	github.com/charmbracelet/x/ansi v0.2.3 // indirect
@@ -181,5 +181,3 @@ require (
 	gopkg.in/yaml.v3 v3.0.1
 	gorm.io/driver/postgres v1.5.9
 )
-
-replace github.com/boss-net/api/cloud => ../cloud
